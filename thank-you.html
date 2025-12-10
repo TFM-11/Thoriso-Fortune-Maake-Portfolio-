@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Thoriso Fortune Maake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --success: #10b981;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --radius-xl: 1rem;
+      --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .thank-you-container {
+      width: 100%;
+      max-width: 600px;
+    }
+    
+    .thank-you-card {
+      background: white;
+      padding: 60px 40px;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-2xl);
+      text-align: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .thank-you-icon {
+      font-size: 5rem;
+      color: var(--success);
+      margin-bottom: 30px;
+      animation: bounce 1s ease-in-out;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .thank-you-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--dark);
+    }
+    
+    .thank-you-card p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #64748b;
+      margin-bottom: 40px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .thank-you-actions {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #7c3aed);
+      color: white;
+      box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.5);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .thank-you-card {
+        padding: 40px 20px;
+      }
+      
+      .thank-you-card h2 {
+        font-size: 2rem;
+      }
+      
+      .thank-you-actions {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-you-container">
+    <div class="thank-you-card">
+      <div class="thank-you-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+      <div class="thank-you-actions">
+        <a href="/" class="btn btn-primary">
+          <i class="fas fa-home"></i>
+          Back to Home
+        </a>
+        <a href="/#contact" class="btn btn-secondary">
+          <i class="fas fa-envelope"></i>
+          Send Another Message
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
